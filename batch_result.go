@@ -18,9 +18,9 @@ type batchResultHeader struct {
 }
 
 type batchResultData struct {
-	Code    int                 `facebook:",required"`
-	Headers []batchResultHeader `facebook:",required"`
-	Body    string              `facebook:",required"`
+	Code    int `facebook:",required"`
+	Headers []batchResultHeader
+	Body    string `facebook:",required"`
 }
 
 func newBatchResult(res Result) (*BatchResult, error) {
